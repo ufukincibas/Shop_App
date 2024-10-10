@@ -7,6 +7,7 @@ import Details from './Pages/Details';
 
 
 
+
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -14,8 +15,17 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         
-        <Stack.Screen name="ProductsPage" component={Products} />
-        <Stack.Screen name="DetailsPage" component={Details} />
+        <Stack.Screen name="ProductsPage" component={Products} options={{
+          title:"ürünler",
+          headerStyle:{backgroundColor: "#64b5f6"},
+          headerTitleStyle:{color:'white'}
+        }} />
+        <Stack.Screen name="DetailsPage" component={Details} options={{
+          title:"Detay" ,
+          headerStyle:{backgroundColor: "#64b5f6"},
+          headerTitleStyle:{color:"white"},
+          headerTintColor: 'white'
+        }} />
         
       </Stack.Navigator>
     </NavigationContainer>
