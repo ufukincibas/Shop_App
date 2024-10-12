@@ -2,8 +2,10 @@ import React from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import Products from './Pages/Products';
 import Details from './Pages/Details';
+import Login from './Pages/Login';
 
 
 
@@ -14,6 +16,10 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+
+      <Stack.Screen name="loginPage" component={Login} options={{
+          headerShown: false
+        }} />
         
         <Stack.Screen name="ProductsPage" component={Products} options={{
           title:"ürünler",
